@@ -349,3 +349,12 @@ view_ = with $ makeXmlElementNoEnd "view"
 -- | @vkern@ element
 vkern_ :: Monad m => [Attributes] -> SvgT m ()
 vkern_ = with $ makeXmlElementNoEnd "vkern"
+
+-- | Make an XML builder for elements which have no ending tag.
+makeXmlElementNoEnd :: Applicative m
+                    => Text       -- ^ Name.
+                    -> HtmlT m () -- ^ A parent element.
+makeXmlElementNoEnd name =
+  HtmlT (pure (\attr -> s "<" <> Blaze.fromText name
+                        <> foldlMapWithKey buildAttr attr <> s "/>",
+                 ()))
