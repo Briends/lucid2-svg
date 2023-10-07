@@ -1,5 +1,5 @@
-name:                lucid-svg
-version:             0.7.1.1
+name:                lucid2-svg
+version:             0.0.0.1
 synopsis:            DSL for SVG using lucid for HTML
 description:         Easy to write SVG in the syle of lucid.
 homepage:            http://github.com/jeffreyrosenbluth/lucid-svg.git
@@ -23,6 +23,6 @@ library
                        blaze-builder >= 0.2   && < 0.5,
                        transformers  >= 0.2   && < 0.6,
                        text          >= 0.11  && < 1.3 || >= 2 && < 2.1,
-                       lucid         >= 2.9.2 && < 3.0
+                       lucid2        >= 0.0.20230706
   hs-source-dirs:      src
   default-language:    Haskell2010
