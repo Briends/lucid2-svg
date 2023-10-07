@@ -15,6 +15,8 @@
 module Lucid.Svg.Elements where
 
 import Lucid.Base
+import qualified Blaze.ByteString.Builder as Blaze
+import           Data.Text (Text)
 
 -- | A type alias for the 'SvgT m a' monad transformer.
 type SvgT = HtmlT
